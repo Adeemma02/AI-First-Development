@@ -1,262 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-    <meta charset="utf-8" />
-    <title>AI-First Development: Code Smarter, Not Harder in 2026</title>
-    <meta name="description" content="Bincom Knowledge Development Session" />
-    <meta name="author" content="Adesemowo Emmanuel" />
+<head>
+  <meta charset="utf-8" />
+  <title>AI-First Development: Code Smarter, Not Harder in 2026</title>
+  <meta name="description" content="Bincom Knowledge Development Session" />
+  <meta name="author" content="Adesemowo Emmanuel" />
 
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- Reveal.js core + theme -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css"
-/>
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css"
-  id="theme"
-/>
+  <!-- Reveal.js core + theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/theme/black.css" id="theme" />
 
-<!-- Highlight.js theme -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/highlight.js@11/styles/monokai-sublime.min.css"
-/>
+  <!-- Highlight.js theme (if you add code later) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11/styles/monokai-sublime.min.css" />
 
-
-    <!-- Tailwind via CDN (keep for now) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: "#3b82f6",
-              accent: "#10b981",
-              darkbg: "#0f172a",
-              card: "#1e293b",
-              lighttext: "#e2e8f0",
-            },
-            fontFamily: {
-              sans: ["Inter", "sans-serif"],
-            },
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#3b82f6",
+            accent: "#10b981",
+            darkbg: "#0f172a",
+            card: "#1e293b",
+            lighttext: "#e2e8f0",
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
           },
         },
-      };
-    </script>
+      },
+    };
+  </script>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
 
-    <!-- Your custom CSS (create css/custom.css if needed) -->
-    <link rel="stylesheet" href="css/custom.css" />
+  <style>
+    .reveal .slides section { text-align: left; }
+    .reveal ul, .reveal ol { margin-left: 1.5em; line-height: 1.6; }
+    .reveal .text-accent { color: #10b981; }
+    .reveal .text-primary { color: #3b82f6; }
+    .arrow-down { font-size: 3rem; color: #10b981; text-align: center; margin: 1.5rem 0; }
+    .smaller-title h1 { font-size: 3.8rem !important; }
+    .smaller-title h2 { font-size: 2.8rem !important; }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
 
-    <style>
-      .smaller-title h1 { font-size: 3.8rem !important; }
-      .smaller-title h2 { font-size: 2.8rem !important; }
-      .reveal .slides section { text-align: left; }
-      .reveal ul { margin-left: 1.5em; }
-      .reveal .text-accent { color: #10b981; }
-      .reveal .text-primary { color: #3b82f6; }
-    </style>
-  </head>
-  <body>
-    <div class="reveal">
-      <div class="slides">
+      <!-- Slide 1: Title -->
+      <section data-background-color="#0f172a" class="smaller-title">
+        <h1 class=" text-5xl font-black text-center text-white leading-tight">
+          AI-First Development
+        </h1>
+        <h2 class="text-4xl mt-8 text-primary text-center font-bold">
+          Code Smarter, Not Harder in 2026
+        </h2>
+        <p class="mt-16 text-2xl text-center text-lighttext">
+          Adesemowo Emmanuel • January 2026
+        </p>
+        <p class="mt-4 text-xl text-center text-gray-400">
+          Bincom Knowledge Development Session
+        </p>
+        <aside class="notes">
+          Start with: "Today I'll show you how AI can help us code faster and better — in simple words. No complicated stuff."
+        </aside>
+      </section>
 
-        <!-- Slide 1: Title -->
-        <section data-background-color="#0f172a" class="smaller-title">
-          <h1 class="text-5xl font-black text-center text-white leading-tight">
-            AI-First Development
-          </h1>
-          <h2 class="text-4xl mt-8 text-primary text-center font-bold">
-            Code Smarter, Not Harder in 2026
-          </h2>
-          <p class="mt-16 text-2xl text-center text-lighttext">
-            Adesemowo Emmanuel • January 2026
-          </p>
-          <p class="mt-4 text-xl text-center text-gray-400">
-            Bincom Knowledge Development Session
-          </p>
-        </section>
+      <!-- Slide 2: Why This Talk? -->
+      <section data-background-color="#0f172a">
+        <h2 class="text-5xl font-bold text-primary mb-10">
+          Why Talk About This Now?
+        </h2>
+        <ul class="space-y-6 text-2xl text-lighttext">
+          <li>Everyone wants projects delivered much faster</li>
+          <li>AI is not optional anymore — it's normal</li>
+          <li>Devs who use AI well finish first</li>
+        </ul>
+        <p class="arrow-down">↓</p>
+        <p class="mt-8 text-xl text-gray-400 text-center">
+          AI doesn't take jobs — it helps fast devs win.
+        </p>
+        <aside class="notes">
+          Say: "Imagine finishing your task in half the time. That's what we're learning today."
+        </aside>
+      </section>
 
-        <!-- Slide 2: What "AI-First" Really Means in 2026 -->
-        <section>
-          <h2 class="text-5xl font-bold text-primary mb-12">
-            1️⃣ What "AI-First" Really Means in 2026
-          </h2>
-          <ul class="space-y-6 text-2xl text-lighttext">
-            <li>AI no longer just "autocomplete" — it's your thinking partner</li>
-            <li>Shift from tool user → <strong class="text-accent">AI orchestrator</strong></li>
-            <li>Key skills now: context engineering > basic prompting</li>
-            <li>Goal: 2-5x faster delivery without sacrificing quality</li>
-          </ul>
-          <p class="mt-12 text-xl text-gray-400">
-            From "AI helps me code" → "I direct AI to build with me"
-          </p>
-        </section>
+      <!-- Slide 3: What “AI-First” Means -->
+      <section>
+        <h2 class="text-5xl font-bold text-primary mb-10">
+          What Does "AI-First" Really Mean?
+        </h2>
+        <ul class="space-y-6 text-2xl text-lighttext">
+          <li>AI is now your smart helper — not just auto-complete</li>
+          <li>You tell AI what to do (like a boss)</li>
+          <li>You still decide what is good or bad</li>
+        </ul>
+        <p class="arrow-down">↓</p>
+        <p class="mt-8 text-xl text-gray-400 text-center">
+          Old: You write all code yourself  
+          New: You guide AI to write most of it
+        </p>
+        <aside class="notes">
+          Keep it light: "It's like having a very fast teammate who listens to you."
+        </aside>
+      </section>
 
-        <!-- Slide 3: The New Core Skill: Context Engineering -->
-        <section>
-          <h2 class="text-5xl font-bold text-primary mb-12">
-            2️⃣ Context Engineering: The New Prompt Engineering
-          </h2>
-          <ul class="space-y-6 text-2xl text-lighttext">
-            <li>Give AI full context upfront (project files, style guide, goals)</li>
-            <li>Use dedicated files: CONTEXT.md, RULES.md, EXAMPLES/</li>
-            <li>Iterate: Ask → Refine → Ask again (agentic thinking)</li>
-            <li>Tools love big context: Claude, Cursor, Aider</li>
-          </ul>
-          <p class="mt-12 text-2xl text-accent">
-            Bad context = garbage output. Good context = senior-level help
-          </p>
-        </section>
-
-        <!-- Slide 4: Advanced Prompting Techniques That Actually Work -->
-        <section>
-          <h2 class="text-5xl font-bold text-primary mb-12">
-            3️⃣ Advanced Prompting Techniques (2026 Edition)
-          </h2>
-          <div class="grid grid-cols-2 gap-8">
-            <div class="bg-card p-8 rounded-xl">
-              <h3 class="text-2xl font-bold text-accent mb-4">Role-Based + Chain-of-Thought</h3>
-              <p>You are a senior Bincom backend architect. Think step-by-step: 1. Understand reqs 2. Plan structure 3. Write secure code</p>
-            </div>
-            <div class="bg-card p-8 rounded-xl">
-              <h3 class="text-2xl font-bold text-accent mb-4">Few-Shot + Iterative</h3>
-              <p>Here are 2 good examples. Now refactor this legacy function the same way.</p>
-            </div>
-            <div class="bg-card p-8 rounded-xl">
-              <h3 class="text-2xl font-bold text-accent mb-4">Ask Questions First</h3>
-              <p>Before coding, ask me clarifying questions about edge cases.</p>
-            </div>
-            <div class="bg-card p-8 rounded-xl">
-              <h3 class="text-2xl font-bold text-accent mb-4">Self-Consistency</h3>
-              <p>Generate 3 approaches, then pick & justify the best one.</p>
-            </div>
+      <!-- Slide 4: Old vs New Way -->
+      <section>
+        <h2 class="text-5xl font-bold text-primary mb-10">
+          Old Way vs New (AI-First) Way
+        </h2>
+        <div class="grid grid-cols-2 gap-8">
+          <div class="bg-card p-8 rounded-xl">
+            <h3 class="text-2xl font-bold text-gray-400 mb-4">Old Way</h3>
+            <ul class="text-xl text-lighttext space-y-4">
+              <li>Think a lot</li>
+              <li>Type every line</li>
+              <li>Find and fix bugs</li>
+              <li>Very slow</li>
+            </ul>
           </div>
-          <p class="mt-12 text-xl text-gray-400">These make AI output 3-10x more reliable</p>
-        </section>
-
-        <!-- Slide 5: Smart Workflow Example -->
-        <section>
-          <h2 class="text-5xl font-bold text-primary mb-12">
-            4️⃣ Smart AI Workflow (From Idea to PR)
-          </h2>
-          <ol class="space-y-6 text-2xl text-lighttext">
-            <li>Define task + context in README or chat</li>
-            <li>Use agentic tool (Cursor / Aider / Claude Code) to plan & execute</li>
-            <li>Review every change — never commit blind</li>
-            <li>Run tests/linters automatically</li>
-            <li>Iterate: "Fix this bug using same style as example X"</li>
-          </ol>
-          <p class="mt-12 text-2xl text-accent">Focus your brain on architecture & business logic</p>
-        </section>
-
-        <!-- Slide 6: Top Tools Stack for Smarter Use (2026) -->
-        <section>
-          <h2 class="text-5xl font-bold text-primary mb-12">
-            5️⃣ Recommended Tools Stack
-          </h2>
-          <div class="grid grid-cols-2 gap-8 text-xl">
-            <div class="bg-card p-8 rounded-xl">
-              <h3 class="text-2xl font-bold text-accent">Cursor / Windsurf</h3>
-              <p>Full-project understanding + agentic edits</p>
-            </div>
-            <div class="bg-card p-8 rounded-xl">
-              <h3 class="text-2xl font-bold text-accent">Claude / Grok / Gemini</h3>
-              <p>Deep reasoning, long context, debugging</p>
-            </div>
-            <div class="bg-card p-8 rounded-xl">
-              <h3 class="text-2xl font-bold text-accent">Aider / Codex</h3>
-              <p>Terminal agents for multi-file changes</p>
-            </div>
-            <div class="bg-card p-8 rounded-xl">
-              <h3 class="text-2xl font-bold text-accent">GitHub Copilot</h3>
-              <p>Inline speed for routine stuff</p>
-            </div>
+          <div class="bg-card p-8 rounded-xl border-2 border-accent">
+            <h3 class="text-2xl font-bold text-accent mb-4">AI-First Way</h3>
+            <ul class="text-xl text-lighttext space-y-4">
+              <li>Explain what you want clearly</li>
+              <li>AI writes most code</li>
+              <li>You check and fix small things</li>
+              <li>Much faster</li>
+            </ul>
           </div>
-          <p class="mt-12 text-xl text-gray-400">Combine 2-3 — no single tool does everything</p>
-        </section>
+        </div>
+        <p class="arrow-down mt-8">↓</p>
+        <p class="mt-6 text-xl text-gray-400 text-center">
+          You still think — but smarter and earlier.
+        </p>
+        <aside class="notes">
+          Analogy: "Like telling a junior dev what to do, but the junior is super fast and never sleeps."
+        </aside>
+      </section>
 
-        <!-- Slide 7: Risks & How to Stay Sharp -->
-        <section data-background-color="#991b1b">
-          <h2 class="text-5xl font-bold text-white mb-12">
-            6️⃣ Don't Get Lazy: Real Risks
-          </h2>
-          <ul class="space-y-8 text-2xl text-gray-200">
-            <li>Over-reliance → weak fundamentals</li>
-            <li>Hallucinated code → bugs & security holes</li>
-            <li>Bad context → wasted time debugging AI mistakes</li>
-            <li>Solution: Always review, test, understand what AI did</li>
-          </ul>
-          <p class="mt-12 text-2xl text-gray-300">
-            Use AI to accelerate — not replace — your thinking
-          </p>
-        </section>
+      <!-- Slide 5: New Important Skill -->
+      <section>
+        <h2 class="text-5xl font-bold text-primary mb-10">
+          The Most Important New Skill: Good Instructions
+        </h2>
+        <ul class="space-y-6 text-2xl text-lighttext">
+          <li>AI gives good answers only if you explain well</li>
+          <li>Clear instructions = great code from AI</li>
+          <li>Bad instructions = wrong code + extra work</li>
+        </ul>
+        <p class="arrow-down">↓</p>
+        <p class="mt-10 text-2xl text-accent text-center">
+          Good instructions = AI acts like a senior developer
+        </p>
+        <aside class="notes">
+          "This is the biggest secret. Spend time explaining — save hours later."
+        </aside>
+      </section>
 
-        <!-- Slide 8: Take Home Actions -->
-        <section data-background-color="#0f172a">
-          <h2 class="text-5xl font-bold text-white mb-12">
-            7️⃣ Take Home: Start Today
-          </h2>
-          <ol class="space-y-8 text-3xl text-lighttext max-w-4xl mx-auto">
-            <li>Pick 1 advanced technique (e.g. chain-of-thought) this week</li>
-            <li>Create CONTEXT.md in your next project</li>
-            <li>Try an agentic tool (Cursor or Aider) on small task</li>
-            <li>Review every AI suggestion — explain why it works/doesn't</li>
-            <li>Share your wins/challenges in Bincom Slack/ next KD</li>
-          </ol>
-          <p class="mt-16 text-3xl text-accent font-bold">
-            Code smarter → Ship faster → Level up quicker
-          </p>
-        </section>
+      <!-- Slide 6: Advanced Prompting (was 7, now 6) -->
+      <section>
+        <h2 class="text-5xl font-bold text-primary mb-10">
+          Simple Ways to Talk Better to AI
+        </h2>
+        <div class="grid grid-cols-2 gap-8">
+          <div class="bg-card p-6 rounded-xl">
+            <h3 class="text-xl font-bold text-accent">Pretend Role</h3>
+            <p class="text-lg mt-3">Tell AI: "You are a senior developer at Bincom..."</p>
+          </div>
+          <div class="bg-card p-6 rounded-xl">
+            <h3 class="text-xl font-bold text-accent">Show Examples</h3>
+            <p class="text-lg mt-3">Give 1-2 good examples first, then say "do it like this"</p>
+          </div>
+          <div class="bg-card p-6 rounded-xl">
+            <h3 class="text-xl font-bold text-accent">Let AI Ask Questions</h3>
+            <p class="text-lg mt-3">Say: "Ask me questions before you write code"</p>
+          </div>
+        </div>
+        <p class="mt-10 text-xl text-gray-400 text-center">
+          Talking clearly to AI is the new superpower.
+        </p>
+        <aside class="notes">
+          "Try these — they make AI much smarter right away."
+        </aside>
+      </section>
 
-        <!-- Slide 9: Q&A -->
-        <section data-background-color="#1e293b">
-          <h1 class="text-7xl font-bold text-white mb-16">
-            Questions & Answers
-          </h1>
-          <ul class="space-y-8 text-2xl text-lighttext">
-            <li>→ Which prompting trick have you tried? How did it go?</li>
-            <li>→ What's your biggest struggle with AI tools right now?</li>
-            <li>→ How can we use this more at Bincom projects?</li>
-          </ul>
-          <p class="mt-16 text-3xl text-primary">Let's chop it!</p>
-        </section>
+      <!-- Slide 7: Smart Workflow (was 8) -->
+      <section>
+        <h2 class="text-5xl font-bold text-primary mb-10">
+          Easy Step-by-Step AI Process
+        </h2>
+        <ol class="space-y-6 text-2xl text-lighttext">
+          <li>Say clearly what you want</li>
+          <li>AI suggests code or plan</li>
+          <li>Always check what AI wrote</li>
+          <li>Test it works before you save</li>
+        </ol>
+        <p class="arrow-down">↓</p>
+        <p class="mt-10 text-2xl text-accent text-center">
+          Never use code you don't understand!
+        </p>
+        <aside class="notes">
+          "This keeps things safe and helps you learn."
+        </aside>
+      </section>
 
-        <!-- Slide 10: Thank You -->
-        <section data-background-color="#0f172a">
-          <h1 class="text-6xl font-bold text-white">Thank You!</h1>
-          <p class="mt-12 text-3xl text-primary">
-            Keep experimenting, keep shipping 🚀
-          </p>
-          <!-- <p class="mt-8 text-2xl text-lighttext">
-            Hit me up for prompt templates or tool setups anytime
-          </p> -->
-        </section>
+      <!-- Slide 8: Tools (was 9) -->
+      <section>
+        <h2 class="text-5xl font-bold text-primary mb-10">
+          Helpful Tools to Try (2026)
+        </h2>
+        <div class="grid grid-cols-2 gap-8 text-xl">
+          <div class="bg-card p-8 rounded-xl">
+            <h3 class="text-2xl font-bold text-accent">Cursor</h3>
+            <p>Great for changing many files at once</p>
+          </div>
+          <div class="bg-card p-8 rounded-xl">
+            <h3 class="text-2xl font-bold text-accent">Claude or Grok</h3>
+            <p>Good for thinking hard and fixing bugs</p>
+          </div>
+          <div class="bg-card p-8 rounded-xl">
+            <h3 class="text-2xl font-bold text-accent">Aider</h3>
+            <p>Works in terminal, changes code fast</p>
+          </div>
+          <div class="bg-card p-8 rounded-xl">
+            <h3 class="text-2xl font-bold text-accent">GitHub Copilot</h3>
+            <p>Helps type code quicker</p>
+          </div>
+        </div>
+        <p class="mt-12 text-xl text-gray-400 text-center">
+          Pick 1 or 2 — start small.
+        </p>
+        <aside class="notes">
+          "No need to use all. Just try one this week."
+        </aside>
+      </section>
 
-      </div>
+      <!-- Slide 9: Risks (was 10) -->
+      <section data-background-color="#991b1b">
+        <h2 class="text-5xl font-bold text-white mb-10">
+          Watch Out: Real Dangers
+        </h2>
+        <ul class="space-y-6 text-2xl text-gray-200">
+          <li>Using AI too much → you forget basics</li>
+          <li>Trust AI 100% → bugs sneak in</li>
+          <li>Bad instructions → fix AI mistakes all day</li>
+        </ul>
+        <p class="arrow-down text-gray-300 mt-8">↓</p>
+        <p class="mt-6 text-2xl text-gray-300 text-center">
+          AI makes good devs better — and weak devs worse.
+        </p>
+        <aside class="notes">
+          "Be careful — always check the work."
+        </aside>
+      </section>
+
+      <!-- Slide 10: Stay Sharp (was 11) -->
+      <section data-background-color="#1e293b">
+        <h2 class="text-5xl font-bold text-white mb-10">
+          How to Keep Getting Better
+        </h2>
+        <ul class="space-y-6 text-2xl text-lighttext">
+          <li>Always read and understand AI code</li>
+          <li>Ask: "Why does this work?"</li>
+          <li>Sometimes write code yourself (no AI)</li>
+          <li>Keep learning normal coding too</li>
+        </ul>
+        <p class="arrow-down">↓</p>
+        <p class="mt-8 text-2xl text-accent text-center">
+          Use AI to help you grow — not replace you.
+        </p>
+        <aside class="notes">
+          "Done right, you'll become stronger faster."
+        </aside>
+      </section>
+
+      <!-- Slide 11: Take Home Actions (was 12, now 11) -->
+      <section data-background-color="#0f172a">
+        <h2 class="text-5xl font-bold text-white mb-10">
+          What to Do This Week
+        </h2>
+        <ol class="space-y-6 text-2xl text-lighttext max-w-4xl mx-auto">
+          <li>Try one simple way to talk to AI better</li>
+          <li>Write a short note explaining your task (save as CONTEXT.md)</li>
+          <li>Use AI on one small real job</li>
+          <li>Check everything AI gives you</li>
+          <li>Tell us in Slack what worked or didn't</li>
+        </ol>
+        <p class="mt-12 text-3xl text-accent font-bold text-center">
+          Start small → Finish faster → Grow quicker
+        </p>
+        <aside class="notes">
+          "Small steps today = big wins tomorrow. Let's do this together."
+        </aside>
+      </section>
+
+      <!-- Slide 12: Q&A (NEW) -->
+      <section data-background-color="#1e293b">
+        <h1 class="text-7xl font-bold text-white mb-16 text-center">
+          Questions & Answers
+        </h1>
+        <p class="text-3xl text-lighttext text-center mb-12">
+          What questions do you have?
+        </p>
+        <ul class="space-y-8 text-2xl text-lighttext max-w-4xl mx-auto">
+          <li>Have you tried AI for coding yet? How was it?</li>
+          <li>What is hard for you with AI right now?</li>
+          <li>How can we use this more in our Bincom work?</li>
+        </ul>
+        <p class="mt-16 text-4xl text-primary text-center font-bold">
+          Let's talk! 🚀
+        </p>
+        <aside class="notes">
+          Smile, pause, look around. "No question is too small — ask anything."
+          If quiet: "One common question I get is..."
+        </aside>
+      </section>
+
     </div>
+  </div>
 
-<!-- Reveal.js -->
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/plugin/notes/notes.js"></script>
 
-<!-- Reveal Highlight plugin -->
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
-
-    <!-- Initialize -->
-    <script>
-      Reveal.initialize({
-        hash: true,
-        transition: "slide",
-        slideNumber: "c/t",
-        plugins: [ RevealHighlight ],  // Enables code highlighting
-      });
-    </script>
-  </body>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      transition: "slide",
+      slideNumber: "c/t",
+      progress: true,
+      controls: true,
+      plugins: [ RevealHighlight, RevealNotes ],
+    });
+  </script>
+</body>
 </html>
